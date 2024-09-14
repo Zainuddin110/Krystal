@@ -58,7 +58,7 @@ h2 {
     background-color: #f9c802; /* Gold background for button */
     color: #00274d; /* Dark blue text */
     padding: 10px 5px;
-    font-size: 15px;
+    font-size: auto;
     border: none;
     border-radius: 25px;
     cursor: pointer;
