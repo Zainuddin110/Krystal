@@ -32,6 +32,7 @@ header {
 .logo1{
     height: 50px;
     width: auto;
+    margin_right: 50px;
 }
 
 h1 {
