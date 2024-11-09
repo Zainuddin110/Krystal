@@ -100,14 +100,94 @@ h2 {
     display: block;
 }
 
+/****** "What's New" Section with Infinite Scroll ******/
+.whats-new {
+    background-color: #e0f7ff; /* Light blue background */
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .scrolling-text p {
+    color: #004085; /* Dark blue text */
+    font-size: 1.1em;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  /* Animation for scrolling effect */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 /* Video Section */
-.background-video {
-    width: 100%;
-    height: 80vh;
-    object-fit: scale-down;
+.video-section {
+    overflow: hidden;
+    position: relative;
+}
+
+.glow-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust based on your need */
+    height: 80vh; /* Same as the video height */
     border-radius: 20px;
+}
+
+.video-container {
+    position: relative;
+    z-index: 1; /* Ensures the video stays above the glow */
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
+
+.background-video {
+    width: 100%; /* Adjust based on your need */
+    height: 78vh;
+    object-fit: scale-down;
+    border-radius: 20px; /* Same border-radius as glow */
+}
+
+/* Pulsating glowing effect */
+.glow-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Same border-radius for glowing effect */
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.4), 0 0 40px rgba(255, 255, 0, 0.4), 0 0 60px rgba(255, 255, 0, 0.4);
+    z-index: 1; /* Glow behind the video */
+    animation: pulse-glow 3s ease-in-out infinite; /* Pulsating effect */
+}
+
+/* Keyframes for pulsating glow */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.4), 0 0 40px rgba(255, 255, 0, 0.4), 0 0 60px rgba(255, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 0, 0.8), 0 0 80px rgba(255, 255, 0, 0.8), 0 0 100px rgba(255, 255, 0, 0.8); /* Brightest point */
+    }
+    100% {
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.4), 0 0 40px rgba(255, 255, 0, 0.4), 0 0 60px rgba(255, 255, 0, 0.4); /* Back to normal */
+    }
+}
+
 
 /* Clients Section */
 .clients {
