@@ -93,9 +93,10 @@ h1 {
     font-size: 2.5em;
     color: #00274d;
     margin-bottom: 35px;
-    border-bottom: 3px solid gold; /* Gold border under the title */
+    border-bottom: 3px solid gold;
     display: inline-block;
     padding-bottom: 10px;
+    animation: fadeIn 2s ease-out;
 }
 
 .about-content {
@@ -113,6 +114,7 @@ h1 {
     font-size: 1.2em;
     color: #00274d;
     text-align: left;
+    animation: slideIn 1s ease-out;
 }
 
 .about-image {
@@ -124,23 +126,69 @@ h1 {
     width: 90%;
     border-radius: 50px;
     box-shadow: 0 0 20px rgba(255, 255, 0, 0.8),
-    0 0 40px rgba(255, 255, 0, 0.6),
-    0 0 60px rgba(255, 255, 0, 0.4);
-animation: glow 2s infinite alternate; /* Animation for glowing effect */
+                0 0 40px rgba(255, 255, 0, 0.6),
+                0 0 60px rgba(255, 255, 0, 0.4);
+    animation: glow 2s infinite alternate;
 }
 
+/* Divider Style */
+.divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #f9c802, transparent);
+    margin: 20px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Text Animation */
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textFadeIn 1s forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+/* Keyframe Animations */
 @keyframes glow {
-0% {
-box-shadow: 0 0 20px rgba(255, 255, 0, 0.8),
-      0 0 40px rgba(255, 255, 0, 0.6),
-      0 0 60px rgba(255, 255, 0, 0.4);
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.8),
+                    0 0 40px rgba(255, 255, 0, 0.6),
+                    0 0 60px rgba(255, 255, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 1),
+                    0 0 80px rgba(255, 255, 0, 0.8),
+                    0 0 100px rgba(255, 255, 0, 0.6);
+    }
 }
-100% {
-box-shadow: 0 0 40px rgba(255, 255, 0, 1),
-      0 0 80px rgba(255, 255, 0, 0.8),
-      0 0 100px rgba(255, 255, 0, 0.6);
+
+@keyframes textFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 
 .background-video {
@@ -176,9 +224,9 @@ box-shadow: 0 0 40px rgba(255, 255, 0, 1),
 }
 
 .badge img {
-    width: 120; /* Ensure image size is consistent */
-    height: 120px; /* Maintain image height */
-    object-fit: cover; /* Ensure image maintains its aspect ratio */
+    width: 110; /* Ensure image size is consistent */
+    height: 110px; /* Maintain image height */
+    object-fit: contain; /* Ensure image maintains its aspect ratio */
     margin-bottom: 5px;
     align-content: center;
 }
