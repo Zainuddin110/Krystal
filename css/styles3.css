@@ -112,7 +112,7 @@ h2 {
   .scrolling-text {
     display: inline-block;
     padding-left: 100%;
-    animation: scroll 10s linear infinite;
+    animation: scroll 20s linear infinite;
   }
   
   .scrolling-text p {
@@ -125,10 +125,10 @@ h2 {
   /* Animation for scrolling effect */
   @keyframes scroll {
     0% {
-      transform: translateX(0);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
   
@@ -208,8 +208,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: scroll 15s linear infinite; /* Slowed down to 15s for smooth loop */
-    animation-delay: 2000ms;
+    animation: scroll 25s linear infinite; /* Slowed down to 15s for smooth loop */
+    animation-delay: -1000ms;
 
 }
 .clients-container1 img {
@@ -226,10 +226,20 @@ h2 {
 }
 
 /* Keyframes for continuous scrolling effect */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Move by half to repeat the loop */
+@keyframes infiniteScroll {
+  from {transform: translateX(0)}
+  to {transform: translateX(-95%)}
 }
+  .clients-container{
+    animation-name: infiniteScroll;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+    .clients-container {
+    white-space: nowrap;
+}
+
 
 /* Footer Styling */
 footer {
