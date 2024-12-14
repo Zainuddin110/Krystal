@@ -201,7 +201,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     animation: scroll 15s linear infinite; /* Slowed down to 15s for smooth loop */
-    animation-delay: -750ms
+    animation-delay: -1000ms
 }
 
 .clients-container1 {
