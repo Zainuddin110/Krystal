@@ -200,7 +200,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: scroll 15s linear infinite; /* Slowed down to 15s for smooth loop */
+    animation: scroll 25s linear infinite; /* Slowed down to 15s for smooth loop */
     animation-delay: -1000ms
 }
 
