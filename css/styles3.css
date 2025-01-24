@@ -286,13 +286,13 @@ footer {
     color: #e6b800; /* Darker gold on hover */
 }
 
-.footer-developed {
+.footer-developed a {
     color: #f9c802; /* Gold color for the link */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-developed :hover {
+.footer-developed a:hover {
     color: #e6b800; /* Darker gold on hover */
 }
 
