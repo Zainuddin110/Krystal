@@ -132,23 +132,21 @@ h2 {
     }
   }
   
-.video-container {
+.background-video-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: #dceeff; /* Match your background color */
-  padding: 20px 0; /* Add some spacing if needed */
+  padding: 20px 0; /* Optional spacing */
 }
 
-.video-container iframe {
-  width: 70%; /* Adjust width as needed (e.g., 70% of the page) */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 1000px; /* Set a max height to limit the video */
+.background-video-container iframe {
+  width: 80%; /* Adjust the width as needed (e.g., 80% of the page) */
+  aspect-ratio: 16 / 9; /* Ensures the 16:9 ratio */
+  max-width: 1280px; /* Limit the max width (optional) */
   border: none;
 }
-
-
 
 .glow-container {
     position: relative;
