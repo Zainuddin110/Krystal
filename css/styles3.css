@@ -144,7 +144,7 @@ h2 {
 .video-container iframe {
   width: 70%; /* Adjust width as needed (e.g., 70% of the page) */
   height: auto; /* Maintain aspect ratio */
-  max-height: 500px; /* Set a max height to limit the video */
+  max-height: 1000px; /* Set a max height to limit the video */
   border: none;
 }
 
