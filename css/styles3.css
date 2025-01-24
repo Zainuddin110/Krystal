@@ -137,12 +137,11 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #dceeff; /* Match your background color */
   padding: 20px 0; /* Optional spacing */
 }
 
 .background-video-container iframe {
-  width: 70%; /* Adjust the width as needed (e.g., 80% of the page) */
+  width: 72%; /* Adjust the width as needed (e.g., 80% of the page) */
   aspect-ratio: 16 / 9; /* Ensures the 16:9 ratio */
   max-width: 1280px; /* Limit the max width (optional) */
   border: none;
