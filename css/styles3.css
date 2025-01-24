@@ -286,6 +286,16 @@ footer {
     color: #e6b800; /* Darker gold on hover */
 }
 
+.footer-developed {
+    color: #f9c802; /* Gold color for the link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-developed :hover {
+    color: #e6b800; /* Darker gold on hover */
+}
+
 /* Social Icons */
 .social-icons {
     margin-top: 15px;
