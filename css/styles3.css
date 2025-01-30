@@ -137,7 +137,7 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px 0; /* Optional spacing */
+  padding: 10px 0; /* Optional spacing */
 }
 
 .background-video-container iframe {
