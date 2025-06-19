@@ -1,104 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="img/Logo.PNG" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Krystal Homepage</title>
-  <link rel="stylesheet" href="css/styles3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/Logo.PNG" />
+  <link rel="stylesheet" href="css/styles3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preload" href="Screenshot 2025-04-27 225252.png" as="image" />
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <img src="img/Logo.PNG" alt="Krystal Logo" class="logo">
-    <img src="img/About Us Page/Logo_text.png" alt="Krystal Text Logo" class="logo1">
-    <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-          <a href="productgallery.html">Products</a>
-          <a href="about_us.html">About Us</a>
-          <a href="Contact_us.html">Contact Us</a>
+<main class="scroll-container">
+
+  <!-- Section 1: Header + Slideshow -->
+  <section id="section1">
+    <header>
+      <img src="img/Logo.PNG" alt="Krystal Logo" class="logo" />
+      <div class="logo1">
+        <img src="img/About Us Page/Logo copy (3).png" alt="Krystal Text Logo" />
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" id="menuToggle" aria-expanded="false" aria-controls="dropdownMenu">Menu</button>
+          <div class="dropdown-content" id="dropdownMenu" role="menu" aria-hidden="true">
+            <a href="productgallery.html" role="menuitem">Products</a>
+            <a href="about_us.html" role="menuitem">About Us</a>
+            <a href="Contact_us.html" role="menuitem">Contact Us</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Video Section -->
-<section class="background-video-container">
-  <iframe 
-    src="https://www.youtube.com/embed/TSXYE4VP3OE?autoplay=1&loop=1&playlist=TSXYE4VP3OE&mute=1" 
-    allow="autoplay; encrypted-media" 
-    allowfullscreen>
-  </iframe>
-</section>
-
-  <!-- Clients Section -->
-  <section class="clients">
-    <h2>Our Clients</h2>
-    <div class="clients-container">
-      <img src="img/logo/govmaha.png" alt="Government of Maharashtra">
-      <img src="img/logo/indianarmy.jpg" alt="Indian Army">
-      <img src="img/logo/indiannavy.png" alt="Indian Navy">
-      <img src="img/logo/CNBC.png" alt="CNBC">
-      <img src="img/logo/govmaha.png" alt="Government of Maharashtra">
-      <img src="img/logo/indianarmy.jpg" alt="Indian Army">
-      <img src="img/logo/indiannavy.png" alt="Indian Navy">
-      <img src="img/logo/CNBC.png" alt="CNBC">
-      </div>
-      <div class="clients-container"> 
-      <img src="img/logo/adityabir.jpeg" alt="Aditya Birla Group">
-      <img src="img/logo/Jawa.png" alt=" Jawa ">
-      <img src="img/logo/toppr.png" alt=" Toppr ">
-      <img src="img/logo/adityabir.jpeg" alt="Aditya Birla Group">
-      <img src="img/logo/Jawa.png" alt=" Jawa ">
-      <img src="img/logo/toppr.png" alt=" Toppr ">
-      </div>
-      <div class="clients-container"> 
-      <img src="img/logo/toyota-logo.svg" alt="Toyota">
-      <img src="img/logo/One_Avighna_Park_Corporate_Logo.jpg" alt="One Avighna Park">
-      <img src="img\logo\5.jpg" alt=" IIT Roorkee ">
-      <img src="img\logo\statue-of-unity.jpg" alt="statue of unity">
-      <img src="img/logo/toyota-logo.svg" alt="Toyota">
-      <img src="img/logo/One_Avighna_Park_Corporate_Logo.jpg" alt="One Avighna Park">
-      <img src="img\logo\5.jpg" alt=" IIT Roorkee ">
-      </div>
-      <div class="clients-container">  
-      <img src="img\logo\DB2019AL01950_medium.jpg" alt="Volkswagen">
-      <img src="img/logo/spicejet (1).png" alt="Spicejet">
-      <img src="img\logo\MITADT.png" alt="MIT ADT">
-      <img src="img\logo\DB2019AL01950_medium.jpg" alt="Volkswagen">
-      <img src="img/logo/spicejet (1).png" alt="Spicejet">
-      <img src="img\logo\MITADT.png" alt="MIT ADT">
-      <img src="img\logo\statue-of-unity.jpg" alt="statue of unity">
-      </div>
-      <!-- Add additional client images as needed -->
+    <div id="slideshow">
+      <img src="Screenshot 2025-04-27 225252.png" alt="Slide 1" loading="lazy" class="active" />
+      <img src="Screenshot 2025-04-27 225345.png" alt="Slide 2" loading="lazy"/>
+      <img src="Screenshot 2025-04-27 225524.png" alt="Slide 3" loading="lazy"/>
     </div>
   </section>
-  
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-content">
-      <p>© 2024 Krystal. All rights reserved.</p>
-      <div class="footer-location">
-        <p>Our Location:</p>
-        <p>44/B Bombay Timber Market, Near Brittania Factory, Reay Road(East), Mumbai 400010</p>
-        <p>+91 6269786110</p>
-        <p><a href="https://maps.app.goo.gl/o2TxX2rA6a3ixPgL7" target="_blank">View on Google Maps</a></p>
+  <!-- Section 2: Video with lazy load on scroll -->
+  <section id="section2">
+    <div class="background-video-container">
+      <div class="video-wrapper" id="video-wrapper">
+        <!-- iframe will be loaded here by JS when section visible -->
       </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100070471800676&mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/krystal_gifts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/6269786110" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://wa.me/6269786110" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="tel:+916269786110"><i class="fas fa-phone"></i></a>
+    </div>
+  </section>
+
+  <!-- Section 4: Clients + Footer -->
+  <section id="section4">
+    <div class="clients">
+      <h2>Our Clients</h2>
+      <div class="clients-row scrolling-wrapper">
+        <img src="img/logo/govmaha.png" alt="Government of Maharashtra" />
+        <img src="img/logo/indianarmy.jpg" alt="Indian Army" />
+        <img src="img/logo/indiannavy.png" alt="Indian Navy" />
+        <img src="img/logo/CNBC.png" alt="CNBC" />
+        <img src="img/logo/adityabir.jpeg" alt="Aditya Birla Group" />
+        <img src="img/logo/Jawa.png" alt="Jawa" />
+        <img src="img/logo/toppr.png" alt="Toppr" />
+        <!-- duplicate for seamless scroll -->
+        <img src="img/logo/govmaha.png" alt="Government of Maharashtra" />
+        <img src="img/logo/indianarmy.jpg" alt="Indian Army" />
+        <img src="img/logo/indiannavy.png" alt="Indian Navy" />
+        <img src="img/logo/CNBC.png" alt="CNBC" />
+        <img src="img/logo/adityabir.jpeg" alt="Aditya Birla Group" />
+        <img src="img/logo/Jawa.png" alt="Jawa" />
+        <img src="img/logo/toppr.png" alt="Toppr" />
       </div>
-   <div class="footer-developed">
-    <p>Developed by :<a href="https://www.linkedin.com/in/zainuddin-fatakdawala-3985b1211/" target="_blank">Zainuddin</a></p>
-  </footer>
+
+      <div class="clients-row scrolling-wrapper">
+        <img src="img/logo/toyota-logo.svg" alt="Toyota" />
+        <img src="img/logo/One_Avighna_Park_Corporate_Logo.jpg" alt="One Avighna Park" />
+        <img src="img/logo/5.jpg" alt="IIT Roorkee" />
+        <img src="img/logo/statue-of-unity.jpg" alt="Statue of Unity" />
+        <img src="img/logo/DB2019AL01950_medium.jpg" alt="Volkswagen" />
+        <img src="img/logo/spicejet (1).png" alt="Spicejet" />
+        <img src="img/logo/MITADT.png" alt="MIT ADT" />
+        <!-- duplicate for seamless scroll -->
+        <img src="img/logo/toyota-logo.svg" alt="Toyota" />
+        <img src="img/logo/One_Avighna_Park_Corporate_Logo.jpg" alt="One Avighna Park" />
+        <img src="img/logo/5.jpg" alt="IIT Roorkee" />
+        <img src="img/logo/statue-of-unity.jpg" alt="Statue of Unity" />
+        <img src="img/logo/DB2019AL01950_medium.jpg" alt="Volkswagen" />
+        <img src="img/logo/spicejet (1).png" alt="Spicejet" />
+        <img src="img/logo/MITADT.png" alt="MIT ADT" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2025 Krystal. All rights reserved.</p>
+        <div class="footer-location">
+          <p>Our Location:</p>
+          <p>44/B Bombay Timber Market, Near Brittania Factory, Reay Road(East), Mumbai 400010</p>
+          <p>+91 6269786110</p>
+          <p><a href="https://maps.app.goo.gl/o2TxX2rA6a3ixPgL7" target="_blank">View on Google Maps</a></p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100070471800676&mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/krystal_gifts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/6269786110" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/6269786110" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="tel:+916269786110"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-developed">
+          <p>Developed by :<a href="https://www.linkedin.com/in/zainuddin-fatakdawala-3985b1211/" target="_blank">Zainuddin</a></p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const dropdownBtn = document.getElementById("menuToggle");
+  const dropdownContent = document.getElementById("dropdownMenu");
+
+  dropdownBtn.addEventListener("click", function(e) {
+    e.stopPropagation();
+    dropdownContent.classList.toggle("show");
+  });
+
+  // Close on click outside
+  document.addEventListener("click", function(e) {
+    if (dropdownContent.classList.contains("show")) {
+      dropdownContent.classList.remove("show");
+    }
+  }); 
+  });
+
+
+  // SLIDESHOW: show first image immediately, then fade between
+  document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll("#slideshow img");
+    let slideIndex = 0;
+
+    // Show first slide right away
+    slides.forEach((slide, i) => slide.classList.toggle("active", i === 0));
+
+    setInterval(function() {
+      slides[slideIndex].classList.remove("active");
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }, 4000);
+  });
+
+  // LAZY LOAD VIDEO ON SCROLL INTO VIEW
+  const videoWrapper = document.getElementById('video-wrapper');
+  const videoURL = "https://www.youtube.com/embed/TSXYE4VP3OE?loop=1&playlist=TSXYE4VP3OE&mute=1&autoplay=1&enablejsapi=1";
+  let iframeLoaded = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        if(!iframeLoaded){
+          videoWrapper.innerHTML = `<iframe
+            src="${videoURL}"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            id="ytplayer"
+            ></iframe>`;
+          iframeLoaded = true;
+        }
+      } else {
+        if(iframeLoaded){
+          videoWrapper.innerHTML = '';
+          iframeLoaded = false;
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.getElementById('section2'));
+</script>
 
 </body>
 </html>
